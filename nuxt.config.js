@@ -27,6 +27,8 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    // https://github.com/antonreshetov/vue-unicons
+    { src: '~/plugins/vue-unicons', mode: 'client' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
