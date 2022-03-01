@@ -4,9 +4,9 @@
       <nuxt-link to="/" class="flex font-medium items-center mb-4 md:mb-0">
         <img src="@/assets/images/logo.png" alt="logo" title="logo" class="h-16 rounded-full">
 
-        <span class="font-bold text-4xl ml-3 text-gray-600 dark:text-white tracking-wider">LUISLOR<span class="text-3xl font-extrabold text-orange-400">DEV</span></span>
+        <span class="font-bold text-4xl ml-3 text-gray-900 dark:text-white tracking-wider">LUISLOR<span class="text-3xl font-extrabold text-orange-400">DEV</span></span>
       </nuxt-link>
-      <nav class="flex flex-row items-center">
+      <nav class="flex flex-row items-center font-semibold">
         <nuxt-link class="mr-5 text-xl" to="/">
           Inicio
         </nuxt-link>
@@ -36,7 +36,7 @@ export default {
 <style scoped>
 
 a.nuxt-link-active {
-  font-weight: bold;
+  @apply font-extrabold;
 }
 
 a.nuxt-link-exact-active {

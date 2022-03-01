@@ -1,7 +1,7 @@
 <template>
   <footer>
     <div class="p-5 flex flex-col md:flex-row justify-around items-center">
-      <p class="font-mono items-center">
+      <p class="font-mono items-center text-sm md:text-base">
         {{ new Date().getFullYear() }} | Hecho con
         <client-only>
           <unicon name="heart" fill="#f44336" />
