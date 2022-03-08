@@ -5,7 +5,7 @@ export const JOBS = [
     startDate: 'Abril 2019',
     endDate: 'Actualidad',
     position: 'Full Stack developer',
-    logo: 'bluetab.png',
+    path: 'jobs/bluetab.png',
     description: 'Desarrollo de aplicaciones web con Grails, Java, VueJS y NuxtJS'
   },
   {
@@ -14,7 +14,7 @@ export const JOBS = [
     startDate: 'Junio 2018',
     endDate: 'Abril 2019',
     position: 'Programador junior',
-    logo: 'atos.png',
+    path: 'jobs/atos.png',
     description: 'Desarrollo y mantenimiento de aplicaciones Web con Java, Spring, HTML, CSS y JS'
   }
 

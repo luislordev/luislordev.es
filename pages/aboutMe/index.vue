@@ -36,22 +36,32 @@
               Experiencia
             </h3>
             <div v-for="job in jobs" :key="job.name" class="p2 m-3">
-              <expirence-card :job="job" />
+              <expirence-card :item="job" type="job" />
             </div>
           </div>
           <div class="lg:w-1/2 ">
             <h3 class="text-3xl text-center font-semibold">
               Educación
             </h3>
+            <div v-for="study in studies" :key="study.name" class="p2 m-3">
+              <expirence-card :item="study" />
+            </div>
           </div>
         </div>
       </div>
 
-      <p>
-        Pero no todo en la vida va a ser programar también tengo otros hobbies (algunos de ellos muy frikis) siempre que tengo
-        hueco me gusta jugar algún videojuego, leer un buen libro de ciencia ficción o practicar tiro con arco pero si hay algo
-        que me gusta por encima de todo (incluso la informática) es Star Wars y es que soy muy friki de esta saga.
-      </p>
+      <div>
+        <p>
+          Pero no todo en la vida va a ser programar también tengo otros hobbies (algunos de ellos muy frikis) siempre que tengo
+          hueco me gusta jugar algún videojuego, leer un buen libro de ciencia ficción o practicar tiro con arco pero si hay algo
+          que me gusta por encima de todo (incluso la informática) es Star Wars, es que soy muy friki de esta saga y para muestra
+          un botón
+        </p>
+
+        <div class="p-5">
+          <img src="@/assets/images/501st.jpg" alt="501st" title="501st" class="rounded-lg mx-auto">
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -60,12 +70,16 @@
 import ExpirenceCard from '~/components/aboutMe/expirenceCard.vue'
 import skill from '~/components/aboutMe/skill.vue'
 import { JOBS } from '@/constants/jobs'
+import { STUDIES } from '@/constants/studies'
 export default {
   name: 'AboutMe',
   components: { skill, ExpirenceCard },
   computed: {
     jobs () {
       return JOBS
+    },
+    studies () {
+      return STUDIES
     }
   }
 }
