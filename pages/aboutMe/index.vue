@@ -30,34 +30,46 @@
           <skill />
         </div>
 
-        <p>
-          Pero no todo en la vida va a ser programar también tengo otros hobbies (algunos de ellos muy frikis) siempre que tengo
-          hueco me gusta jugar algún videojuego, leer un buen libro de ciencia ficción o practicar tiro con arco pero si hay algo
-          que me gusta por encima de todo (incluso la informática) es Star Wars y es que soy muy friki de esta saga.
-        </p>
+        <div class="flex flex-col lg:flex-row md:space-x-4 flex-grow  mt-3">
+          <div class="lg:w-1/2 ">
+            <h3 class="text-3xl text-center font-semibold">
+              Experiencia
+            </h3>
+            <div v-for="job in jobs" :key="job.name" class="p2 m-3">
+              <expirence-card :job="job" />
+            </div>
+          </div>
+          <div class="lg:w-1/2 ">
+            <h3 class="text-3xl text-center font-semibold">
+              Educación
+            </h3>
+          </div>
+        </div>
       </div>
+
+      <p>
+        Pero no todo en la vida va a ser programar también tengo otros hobbies (algunos de ellos muy frikis) siempre que tengo
+        hueco me gusta jugar algún videojuego, leer un buen libro de ciencia ficción o practicar tiro con arco pero si hay algo
+        que me gusta por encima de todo (incluso la informática) es Star Wars y es que soy muy friki de esta saga.
+      </p>
     </div>
   </section>
 </template>
 
 <script>
+import ExpirenceCard from '~/components/aboutMe/expirenceCard.vue'
 import skill from '~/components/aboutMe/skill.vue'
+import { JOBS } from '@/constants/jobs'
 export default {
   name: 'AboutMe',
-  components: { skill },
+  components: { skill, ExpirenceCard },
   computed: {
-    birthday () {
-      const yearBirthday = new Date('1997-01-21')
-      const today = new Date()
-
-      let years = (today.getTime() - yearBirthday.getTime()) / 1000
-      years /= (60 * 60 * 24)
-
-      return Math.abs(Math.round(years / 365.25))
+    jobs () {
+      return JOBS
     }
   }
-
 }
+
 </script>
 
 <style>
