@@ -5,7 +5,8 @@ export const STUDIES = [
     startDate: 'Octubre 2016',
     endDate: 'Junio 2018',
     position: 'Grado Superior Desarrollo de Aplicaciones Multiplataforma',
-    path: 'studies/ufvLogo.png'
+    path: 'studies/ufvLogo.png',
+    url: 'https://www.ufv.es/'
   },
   {
     name: 'Colegio San Gabriel',
@@ -13,6 +14,7 @@ export const STUDIES = [
     startDate: 'Septiembre 2014',
     endDate: 'Junio 2016',
     position: 'Grado Medio Sistemas Microinformático y Redes',
-    path: 'studies/sgLogo.png'
+    path: 'studies/sgLogo.png',
+    url: 'http://madrid.gabrielistas.org/'
   }
 ]

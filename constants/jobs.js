@@ -6,7 +6,8 @@ export const JOBS = [
     endDate: 'Actualidad',
     position: 'Full Stack developer',
     path: 'jobs/bluetab.png',
-    description: 'Desarrollo de aplicaciones web con Grails, Java, VueJS y NuxtJS'
+    description: 'Desarrollo de aplicaciones web con Grails, Java, VueJS y NuxtJS',
+    url: 'https://www.bluetab.net/es/'
   },
   {
     name: 'Atos IT Solutions and Services',
@@ -15,7 +16,8 @@ export const JOBS = [
     endDate: 'Abril 2019',
     position: 'Programador junior',
     path: 'jobs/atos.png',
-    description: 'Desarrollo y mantenimiento de aplicaciones Web con Java, Spring, HTML, CSS y JS'
+    description: 'Desarrollo y mantenimiento de aplicaciones Web con Java, Spring, HTML, CSS y JS',
+    url: 'https://atos.net/es/spain'
   }
 
 ]
