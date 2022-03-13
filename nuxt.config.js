@@ -66,13 +66,13 @@ export default {
     exposeConfig: true
   },
 
-  //Config nuxt-content
+  // Config nuxt-content
   content: {
     markdown: {
       prism: {
-        theme: 'prism-themes/themes/prism-material-oceanic.css',
-      },
-    },
-  },
+        theme: 'prism-themes/themes/prism-material-oceanic.css'
+      }
+    }
+  }
 
 }

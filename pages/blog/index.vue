@@ -1,26 +1,31 @@
 <template>
-  <div>
-    <h1 class="text-7xl font-black text-center">
-      New on the blog
-    </h1>
-    <div v-for="post in posts" :key="post.title">
-      <h2 class="mt-2 text-3xl font-semibold">
-        {{ post.title }}
-      </h2>
-    </div>
+  <div class="container mx-auto">
+    <section class="py-4">
+      <h3 class="text-3xl font-semibold">
+        Articulos
+      </h3>
+    </section>
+    <section class="flex flex-col space-y-4">
+      <div v-for="post in posts" :key="post.slug">
+        <nuxt-link :to="`blog/${post.slug}`">
+          <article-card :post="post" class="hover:bg-orange-400 " />
+        </nuxt-link>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
+import articleCard from '~/components/blog/articleCard.vue'
 export default {
   name: 'Blog',
+  components: { articleCard },
   async asyncData ({ $content }) {
     const posts = await $content('articles')
-      .only(['title', 'tags', 'slug'])
       .sortBy('createdAt', 'desc')
+      .only(['title', 'tags', 'slug', 'createdAt', 'description'])
       .fetch()
 
-    console.log('posts', posts)
     return {
       posts
     }
@@ -29,6 +34,9 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.prueba {
+  @apply border-2 border-orange-400 translate-y-1 bg-red-500
+}
 
 </style>
