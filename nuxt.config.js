@@ -64,5 +64,15 @@ export default {
 
   tailwindcss: {
     exposeConfig: true
-  }
+  },
+
+  //Config nuxt-content
+  content: {
+    markdown: {
+      prism: {
+        theme: 'prism-themes/themes/prism-material-oceanic.css',
+      },
+    },
+  },
+
 }

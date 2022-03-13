@@ -1,5 +1,9 @@
 <template>
-  <h1>{{ post.title }}</h1>
+  <div>
+    {{ post.title }}
+
+    <nuxt-content class="mt-4 prose dark:prose-dark max-w-none" :document="post" />
+  </div>
 </template>
 
 <script>
