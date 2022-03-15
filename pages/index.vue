@@ -25,7 +25,7 @@
           <nuxt-link to="/aboutMe" class="px-4 py-2 rounded-2xl bg-orange-400 text-white font-semibold hover:bg-orange-500">
             Saber más
           </nuxt-link>
-          <a href="#" target="_blank" class="px-4 py-2 mt-4 md:mt-0 border-2 rounded-2xl border-orange-400 hover:bg-orange-400 hover:text-white font-semibold">
+          <a href="/cv/Luis_Lorenzo_CV.pdf" target="_blank" class="px-4 py-2 mt-4 md:mt-0 border-2 rounded-2xl border-orange-400 hover:bg-orange-400 hover:text-white font-semibold">
             Descargar CV
           </a>
         </div>
@@ -39,7 +39,9 @@
     <section class="mt-4">
       <div v-if="posts" class="flex flex-wrap  justify-center">
         <div v-for="post in posts" :key="post.slug" class="w-full md:w-1/2 lg:w-1/3 md:pr-3 pb-3 hover:px-4">
-          <article-card :post="post" class="cursor-pointer transition duration-500 ease-in-out transform hover:-translate-y-2" />
+          <nuxt-link :to="`blog/${post.slug}`">
+            <article-card :post="post" class="cursor-pointer transition duration-500 ease-in-out transform hover:-translate-y-2" />
+          </nuxt-link>
         </div>
       </div>
       <h3 v-else class="text-3xl font-semibold text-center p-5 h-28">
