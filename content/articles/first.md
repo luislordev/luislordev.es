@@ -3,7 +3,6 @@ title: My first Blog Post
 description: Learning how to use @nuxt/content to create a blog
 alt: my first blog post
 read: 6
-createdAt: 13-03-2022
 ---
 
 # h1 Heading

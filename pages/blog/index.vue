@@ -8,7 +8,7 @@
     <section class="flex flex-col space-y-4">
       <div v-for="post in posts" :key="post.slug">
         <nuxt-link :to="`blog/${post.slug}`">
-          <article-card :post="post" class="hover:bg-orange-400 " />
+          <article-card :post="post" class="transition duration-500 ease-in-out transform hover:-translate-y-2" />
         </nuxt-link>
       </div>
     </section>
@@ -16,14 +16,14 @@
 </template>
 
 <script>
-import articleCard from '~/components/blog/articleCard.vue'
+import articleCard from '~/components/common/articleCard.vue'
 export default {
   name: 'Blog',
   components: { articleCard },
   async asyncData ({ $content }) {
     const posts = await $content('articles')
       .sortBy('createdAt', 'desc')
-      .only(['title', 'tags', 'slug', 'createdAt', 'description'])
+      .only(['title', 'tags', 'slug', 'createdAt', 'description', 'read'])
       .fetch()
 
     return {

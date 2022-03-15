@@ -1,15 +1,16 @@
 <template>
-  <article class="border-0 border-orange-400 rounded-xl px-3 py-2">
+  <article class="rounded-xl px-3 py-2 border-2 border-gray-700 dark:border-white hover:border-orange-400  dark:hover:border-orange-400">
     <h4 class="text-2xl font-semibold">
       {{ post.title }}
     </h4>
-    <div>
-      <div>
-        📅 {{ formatDate }}
-      </div>
-    </div>
     <div class="mt-3">
-      {{ post.description }}
+      <div>
+        <span>📅 {{ formatDate }}</span> |
+        <span>⌛️ {{ post.read }} minutos</span>
+      </div>
+      <div class="mt-3">
+        {{ post.description }}
+      </div>
     </div>
   </article>
 </template>

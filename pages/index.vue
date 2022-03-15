@@ -36,8 +36,13 @@
         Útimos articulos
       </h3>
     </section>
-    <section class="h-28">
-      <h3 class="text-3xl font-semibold text-center p-5">
+    <section class="mt-4">
+      <div v-if="posts" class="flex flex-wrap  justify-center">
+        <div v-for="post in posts" :key="post.slug" class="w-full md:w-1/2 lg:w-1/3 md:pr-3 pb-3 hover:px-4">
+          <article-card :post="post" class="cursor-pointer transition duration-500 ease-in-out transform hover:-translate-y-2" />
+        </div>
+      </div>
+      <h3 v-else class="text-3xl font-semibold text-center p-5 h-28">
         Proximámente...
       </h3>
     </section>
@@ -45,8 +50,21 @@
 </template>
 
 <script>
+import ArticleCard from '~/components/common/articleCard.vue'
 export default {
-  name: 'Home'
+  name: 'Home',
+  components: { ArticleCard },
+  async asyncData ({ $content }) {
+    const posts = await $content('articles')
+      .sortBy('createdAt', 'desc')
+      .only(['title', 'tags', 'slug', 'createdAt', 'description', 'read'])
+      .limit(3)
+      .fetch()
+
+    return {
+      posts
+    }
+  }
 
 }
 </script>
