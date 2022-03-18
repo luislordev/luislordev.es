@@ -13,7 +13,7 @@
         </h1>
       </div>
       <div>
-        <img src="@/assets/images/me.jpg" class="h-64 w-64 md:h-96 md:w-96 object-cover border-8 border-orange-400 rounded-3xl">
+        <img src="@/assets/images/me.jpg" alt="foto perfil" title="yo" class="h-64 w-64 md:h-96 md:w-96 object-cover border-8 border-orange-400 rounded-3xl">
       </div>
     </section>
     <section class="flex justify-center py-16">

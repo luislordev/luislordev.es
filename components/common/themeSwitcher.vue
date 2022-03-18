@@ -2,6 +2,8 @@
   <button
     class="sm:ml-6 p-2 shadow-sm rounded-lg
             cursor-pointer bg-gray-200 bg-opacity-90 dark:bg-opacity-20"
+    name="themeSwicherButton"
+    aria-label="themeSwicherButton"
     @click="changeTheme()"
   >
     <!-- Dark mode icon -->

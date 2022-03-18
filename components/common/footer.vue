@@ -15,6 +15,7 @@
           :key="social.name"
           :href="social.url"
           target="_blank"
+          :aria-label="social.name"
           class="ml-3 p-3 cursor-pointer"
         >
           <client-only>
