@@ -5,7 +5,7 @@ export const STUDIES = [
     startDate: 'Octubre 2016',
     endDate: 'Junio 2018',
     position: 'Grado Superior Desarrollo de Aplicaciones Multiplataforma',
-    path: 'studies/ufvLogo.png',
+    path: 'https://res.cloudinary.com/dmqgdno4p/image/upload/v1647648294/Blog/studies/ufvLogo_xfrlaf.webp',
     url: 'https://www.ufv.es/'
   },
   {
@@ -14,7 +14,7 @@ export const STUDIES = [
     startDate: 'Septiembre 2014',
     endDate: 'Junio 2016',
     position: 'Grado Medio Sistemas Microinformático y Redes',
-    path: 'studies/sgLogo.png',
+    path: 'https://res.cloudinary.com/dmqgdno4p/image/upload/v1647648297/Blog/studies/sgLogo_wheol0.webp',
     url: 'http://madrid.gabrielistas.org/'
   }
 ]

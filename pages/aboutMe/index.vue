@@ -59,7 +59,7 @@
         </p>
 
         <div class="p-5">
-          <img src="@/assets/images/501st.jpg" alt="501st" title="501st" class="rounded-lg mx-auto">
+          <img src="https://res.cloudinary.com/dmqgdno4p/image/upload/v1647648008/Blog/501st_utim7c.webp" alt="501st" title="501st" class="rounded-lg mx-auto">
         </div>
       </div>
     </div>

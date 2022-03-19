@@ -2,7 +2,14 @@
   <header>
     <div class="p-5 items-center flex flex-col md:flex-row justify-around">
       <nuxt-link to="/" class="flex font-medium items-center mb-4 md:mb-0">
-        <img src="@/assets/images/logo.png" alt="logo" title="logo" class="h-16 rounded-full">
+        <img
+          src="https://res.cloudinary.com/dmqgdno4p/image/upload/v1647647361/Blog/logo_teojdv.webp"
+          alt="logo"
+          title="logo"
+          class="h-16 rounded-full"
+          height="64"
+          width="64"
+        >
 
         <span class="font-bold text-4xl ml-3 text-gray-900 dark:text-white tracking-wider">LUISLOR<span class="text-3xl font-extrabold text-orange-400">DEV</span></span>
       </nuxt-link>

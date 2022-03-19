@@ -3,7 +3,7 @@
     <div class="flex items-center">
       <div class="w-1/4">
         <a :href="item.url" target="_blank" class="cursor-pointer">
-          <img :src="require(`@/assets/images/${item.path}`)" :alt="item.path" :title="item.name" class="w-full rounded-md">
+          <img :src="item.path" :alt="item.name" :title="item.name" class="w-full rounded-md">
         </a>
       </div>
       <div class="ml-5 flex flex-col w-3/4">
