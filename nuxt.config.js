@@ -43,7 +43,9 @@ export default {
     // https://color-mode.nuxtjs.org
     '@nuxtjs/color-mode',
     // https://www.npmjs.com/package/@nuxtjs/svg
-    '@nuxtjs/svg'
+    '@nuxtjs/svg',
+    // Google Analytics
+    '@nuxtjs/google-analytics'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -73,6 +75,10 @@ export default {
         theme: 'prism-themes/themes/prism-material-oceanic.css'
       }
     }
+  },
+
+  googleAnalytics: {
+    id: process.env.GOOGLE_ANALYTICS_ID
   }
 
 }
