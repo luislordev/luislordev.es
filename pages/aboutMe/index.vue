@@ -74,6 +74,11 @@ import { STUDIES } from '@/constants/studies'
 export default {
   name: 'AboutMe',
   components: { skill, ExpirenceCard },
+  head () {
+    return {
+      title: 'LuisLorDev | Sobre mí'
+    }
+  },
   computed: {
     jobs () {
       return JOBS

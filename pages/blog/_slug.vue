@@ -20,6 +20,11 @@ export default {
     const post = await $content(`articles/${params.slug}`).fetch()
     return { post }
   },
+  head () {
+    return {
+      title: `LuisLorDev | ${this.post.title}`
+    }
+  },
   computed: {
     formatDate () {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }

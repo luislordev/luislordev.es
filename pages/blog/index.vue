@@ -29,6 +29,11 @@ export default {
     return {
       posts
     }
+  },
+  head () {
+    return {
+      title: 'LuisLorDev | Blog'
+    }
   }
 
 }

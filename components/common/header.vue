@@ -18,7 +18,7 @@
           Inicio
         </nuxt-link>
         <nuxt-link class="mr-5 text-xl" to="/aboutMe">
-          Sobre mi
+          Sobre mí
         </nuxt-link>
         <nuxt-link class="mr-5 text-xl" to="/blog">
           Blog
