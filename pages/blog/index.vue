@@ -32,7 +32,14 @@ export default {
   },
   head () {
     return {
-      title: 'LuisLorDev | Blog'
+      title: 'LuisLorDev | Blog',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Página de listado de post'
+        }
+      ]
     }
   }
 

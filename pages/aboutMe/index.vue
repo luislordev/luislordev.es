@@ -76,7 +76,14 @@ export default {
   components: { skill, ExpirenceCard },
   head () {
     return {
-      title: 'LuisLorDev | Sobre mí'
+      title: 'LuisLorDev | Sobre mí',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Descripción sobre mí, mi stack tecnológico, experiencia laboral y un poco sobre mis hobbies'
+        }
+      ]
     }
   },
   computed: {

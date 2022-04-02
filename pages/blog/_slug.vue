@@ -22,7 +22,14 @@ export default {
   },
   head () {
     return {
-      title: `LuisLorDev | ${this.post.title}`
+      title: `LuisLorDev | ${this.post.title}`,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.post.description
+        }
+      ]
     }
   },
   computed: {

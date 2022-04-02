@@ -66,6 +66,17 @@ export default {
     return {
       posts
     }
+  },
+  head () {
+    return {
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Página de presentación y acceso a últimos blogs'
+        }
+      ]
+    }
   }
 
 }
