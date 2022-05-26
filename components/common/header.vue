@@ -3,7 +3,7 @@
     <div class="p-5 items-center flex flex-col md:flex-row justify-around">
       <nuxt-link to="/" class="flex font-medium items-center mb-4 md:mb-0">
         <img
-          src="https://res.cloudinary.com/dmqgdno4p/image/upload/v1647647361/Blog/logo_teojdv.webp"
+          :src="getImage"
           alt="logo"
           title="logo"
           class="h-16 rounded-full"
@@ -35,7 +35,16 @@
 import themeSwitcher from './themeSwitcher.vue'
 export default {
   name: 'Header',
-  components: { themeSwitcher }
+  components: { themeSwitcher },
+  computed: {
+    getImage () {
+      if (this.$colorMode.value === 'light') {
+        return 'https://res.cloudinary.com/dmqgdno4p/image/upload/v1653589215/Blog/LogoClaro_ebtens.webp'
+      } else {
+        return 'https://res.cloudinary.com/dmqgdno4p/image/upload/v1653589215/Blog/LogoOscuro_nbkprl.webp'
+      }
+    }
+  }
 
 }
 </script>
