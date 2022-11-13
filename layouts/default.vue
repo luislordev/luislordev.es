@@ -10,17 +10,8 @@
 import Footer from '~/components/common/footer.vue'
 import Header from '~/components/common/header.vue'
 export default {
-  components: { Header, Footer },
-  head () {
-    return {
-      link: [
-        {
-          rel: 'canonical',
-          href: 'https://luislordev.es' + this.$route.path
-        }
-      ]
-    }
-  }
+  components: { Header, Footer }
+
 }
 </script>
 
