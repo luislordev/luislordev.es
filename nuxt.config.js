@@ -4,15 +4,18 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'LuisLorDev | Website',
+    title: 'LuisLorDev | Web y blog personal',
     htmlAttrs: {
       lang: 'es'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Mi web personal, portofolio y blog sobre desarrollo' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { hid: 'description', name: 'description', content: 'Soy  Luis Lorenzo, soy programador web desde hace más de 4 años. Esta es mi web personal en ella encontrarás  más cosas sobre mí, los lugares donde he trabajado, mi stack tecnológico y también una sección de blog en el que hay artículos sobre programación y otros temas' },
+      { name: 'format-detection', content: 'telephone=no' },
+      { name: 'url', content: 'https://luislordev.es' },
+      { name: 'canonical', content: 'https://luislordev.es' },
+      { name: 'author', content: 'Luis Lorenzo Cuadrado' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -45,12 +48,14 @@ export default {
     // https://www.npmjs.com/package/@nuxtjs/svg
     '@nuxtjs/svg',
     // Google Analytics
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/google-analytics',
+    // Custom router generator
+    '@/modules/sitemapRouteGenerator'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxt/content'
+    '@nuxt/content', '@nuxtjs/sitemap'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -79,6 +84,15 @@ export default {
 
   googleAnalytics: {
     id: process.env.GOOGLE_ANALYTICS_ID
+  },
+
+  // Sitemap config
+  sitemap: {
+    hostname: 'https://luislordev.es',
+    gzip: true,
+    routes: [
+
+    ]
   }
 
 }
