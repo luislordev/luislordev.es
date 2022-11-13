@@ -15,7 +15,8 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
       { name: 'url', content: 'https://luislordev.es' },
       { name: 'canonical', content: 'https://luislordev.es' },
-      { name: 'author', content: 'Luis Lorenzo Cuadrado' }
+      { name: 'author', content: 'Luis Lorenzo Cuadrado' },
+      { name: 'robots', content: 'index,follow' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -57,6 +58,7 @@ export default {
   modules: [
     '@nuxt/content',
     '@nuxtjs/robots',
+    '@nuxtjs/dotenv',
     '@nuxtjs/sitemap' // Siempre tiene que estar en ultima posición
   ],
 
@@ -90,15 +92,14 @@ export default {
 
   // Sitemap config
   sitemap: {
-    hostname: 'https://luislordev.es',
+    hostname: process.env.BASE_URL || 'https://luislordev.es',
     gzip: true
   },
 
   // Robots config
   robots: {
     Allow: '/',
-    Host: 'https://luislordev.es',
-    sitemap: 'https://luislordev.es/sitemap.xml'
+    Host: process.env.BASE_URL || 'https://luislordev.es',
+    sitemap: `${process.env.BASE_URL || 'https://luislordev.es'}/sitemap.xml`
   }
-
 }
