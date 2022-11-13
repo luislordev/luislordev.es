@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer class="py-5">
     <div class="p-5 flex flex-col md:flex-row justify-around items-center">
       <p class="font-mono items-center text-sm md:text-base">
         {{ new Date().getFullYear() }} | Hecho con
@@ -24,6 +24,14 @@
         </a>
       </div>
     </div>
+    <div class="px-5 pt-5 pb-10 flex flex-col md:flex-row justify-center items-center">
+      <nuxt-link to="/privacy" class="mb-3 md:mb-0 md:mr-10">
+        Política de privacidad
+      </nuxt-link>
+      <nuxt-link to="/cookies">
+        Política de cookies
+      </nuxt-link>
+    </div>
   </footer>
 </template>
 
@@ -42,7 +50,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>
