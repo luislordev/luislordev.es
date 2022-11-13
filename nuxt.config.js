@@ -55,7 +55,9 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@nuxt/content', '@nuxtjs/sitemap'
+    '@nuxt/content',
+    '@nuxtjs/robots',
+    '@nuxtjs/sitemap' // Siempre tiene que estar en ultima posición
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -89,10 +91,14 @@ export default {
   // Sitemap config
   sitemap: {
     hostname: 'https://luislordev.es',
-    gzip: true,
-    routes: [
+    gzip: true
+  },
 
-    ]
+  // Robots config
+  robots: {
+    Allow: '/',
+    Host: 'https://luislordev.es',
+    sitemap: 'https://luislordev.es/sitemap.xml'
   }
 
 }
