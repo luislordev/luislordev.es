@@ -12,13 +12,13 @@
     </div>
     <div class="text-lg flex flex-grow flex-col space-y-9">
       <p>
-        Nací en un gélido mes de enero allá por 1997 en Madrid. Estudié un FP de Grado Superior Desarrollo de Aplicaciones
-        Multiplataforma en la Universidad Francisco de Vitoria. Actualmente trabajo como desarrollador web en el mundo de
-        consultoria en el cual tengo más de 4 años de experiencía.
+        Empecé en el mundo de la programción allá por 2016 estudiando el FP de Grado Superior Desarrollo de Aplicaciones
+        Multiplataforma en la Universidad Francisco de Vitoria. Actualmente trabajo desarrollando aplicaciones web de manera
+        remota desde Madrid.
       </p>
       <p>
         Me considero una persona curiosa por ello intento mantenerme siempre al día en las tecnolgias con las que trabajo
-        y siempre estoy dispuesto a aprender algo nuevo y afrontar nuevas metas o retos que me encuentre por el camino <span>#ThisIsTheWay</span>
+        y siempre estoy dispuesto a aprender algo nuevo y afrontar nuevas metas o retos que me encuentre por el camino. <span class="italic">#ThisIsTheWay</span>
       </p>
 
       <div>
@@ -52,10 +52,11 @@
 
       <div>
         <p>
-          Pero no todo en la vida va a ser programar también tengo otros hobbies (algunos de ellos muy frikis) siempre que tengo
-          hueco me gusta jugar algún videojuego, leer un buen libro de ciencia ficción o practicar tiro con arco pero si hay algo
-          que me gusta por encima de todo (incluso la informática) es Star Wars, es que soy muy friki de esta saga y para muestra
-          un botón
+          A nivel más personal, entre mis aficiones está el tiro con arco , voy siempre que tengo tiempo, también soy un apasionado
+          de los videojuegos y de la ciencia ficción ya que ha marcado gran parte de mi vida desde que tengo memoria y si tuviera que
+          destacar alguna saga en concreto esa sería Star Wars sin lugar a dudas.  Y ya por último deciros que también participo como
+          voluntario en la Legión 501 una asociación benéfica de Star Wars que nació con el proposito de manifestar la pasión por esta
+          saga y aprovechó este potencial para ayudar en causas solidarias.
         </p>
 
         <div class="p-5">
@@ -97,7 +98,3 @@ export default {
 }
 
 </script>
-
-<style>
-
-</style>
