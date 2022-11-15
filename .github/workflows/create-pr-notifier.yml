@@ -1,0 +1,24 @@
+name: Create Pull Request notifier
+on:
+  pull_request:
+    branches:
+      - master
+      - develop
+jobs:
+  create_PR:
+    name: Create Pull Request
+    runs-on: ubuntu-latest
+    steps:
+      - name: 💌 Send telegram message on Pull Request
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: |
+            🔵 Se ha creado la Pull Request: ${{github.event.pull_request.number}}: 
+            📦 Repository: ${{ github.repository }}
+
+            Título: ${{github.event.pull_request.title}}
+              - URL: ${{github.event.pull_request.html_url}}
+              - Estado: ${{github.event.pull_request.state}}
+              - Descripción: ${{github.event.pull_request.body}}
