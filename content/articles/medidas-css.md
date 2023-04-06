@@ -58,9 +58,7 @@ El uso de unidades de medida relativas se ha convertido en una práctica recomen
 
 ## Otras unidades de medida en CSS
 
-Además de las unidades de medida mencionadas anteriormente, CSS ofrece otras unidades de medida que pueden ser útiles en ciertas situaciones. Algunas de estas unidades de medida incluyen:
-
-Aparte de las unidades que hemos visto anteriormente, CSS nos ofrece otras medidas que pueden sernos útiles 
+Aparte de las unidades que hemos visto anteriormente, CSS nos ofrece otras medidas que pueden sernos útiles: 
 
 - Unidades de medida absolutas, como pulgadas (in), centímetros (cm) y milímetros (mm). Estas unidades de medida son útiles para diseños impresos o para definir el tamaño de elementos que deben tener un tamaño fijo.
 - Unidades de medida de la vista, como viewport width (vw) y viewport height (vh). Estas unidades de medida se refieren al tamaño de la ventana gráfica del navegador y son útiles para crear diseños responsives que se adapten al tamaño de la pantalla.
