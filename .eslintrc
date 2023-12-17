@@ -1,0 +1,28 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "plugin:nuxt/recommended",
+        "plugin:vue/vue3-recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "parser": "@typescript-eslint/parser",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "@typescript-eslint/eslint-plugin"
+    ],
+    "ignorePatterns":["__nuxt2"],
+    "rules": {
+        "vue/multi-word-component-names":"off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/no-minused-promises": "off",
+        "@typescript-eslint/no-non-null-assertion":"off",
+        "@typescript-eslint/no-misused-promises": "off"
+    }
+}
