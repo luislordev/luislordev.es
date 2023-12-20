@@ -13,14 +13,18 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@nuxtjs/color-mode": "^3.3.2",
+    "@nuxtjs/tailwindcss": "^6.10.1",
     "@typescript-eslint/eslint-plugin": "^6.15.0",
     "@typescript-eslint/parser": "^6.15.0",
     "eslint": "^8.56.0",
     "eslint-plugin-nuxt": "^4.0.0",
     "eslint-plugin-vue": "^9.19.2",
     "nuxt": "^3.8.2",
+    "nuxt-icon": "^0.6.7",
     "typescript": "^5.3.3",
     "vite-plugin-eslint": "^1.8.1",
+    "vite-svg-loader": "^5.1.0",
     "vue": "^3.3.12",
     "vue-router": "^4.2.5"
   }
