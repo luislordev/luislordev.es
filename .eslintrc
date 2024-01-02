@@ -19,6 +19,7 @@
     ],
     "ignorePatterns":["__nuxt2"],
     "rules": {
+        "semi": ["warn", "never"],
         "vue/multi-word-component-names":"off",
         "@typescript-eslint/explicit-function-return-type": "off",
         "@typescript-eslint/no-minused-promises": "off",

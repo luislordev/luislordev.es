@@ -1,4 +1,5 @@
-import type { FunctionalComponent } from "vue";
+import type { MarkdownParsedContent } from "@nuxt/content/dist/runtime/types"
+import type { FunctionalComponent } from "vue"
 
 export interface Experience {
   name: string,
@@ -12,6 +13,14 @@ export interface Experience {
 }
 
 export interface Skill {
-  name:string,
-  logo:FunctionalComponent
+  name: string,
+  logo: FunctionalComponent
+}
+
+export interface BlogPost extends MarkdownParsedContent {
+  title: string
+  description: string
+  alt: string
+  read: string
+  createdAt: string
 }

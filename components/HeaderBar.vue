@@ -37,16 +37,10 @@ import type { ThemeSelector } from '#build/components';
         </nuxt-link>
         <nuxt-link
           class="mr-5 text-xl"
-          to="/"
-        >
-          Blog
-        </nuxt-link>
-        <!-- <nuxt-link
-          class="mr-5 text-xl"
           to="/blog"
         >
           Blog
-        </nuxt-link> -->
+        </nuxt-link>
         <div>
           <ThemeSelector />
         </div>
@@ -65,11 +59,11 @@ const getImage = computed(() => {
 </script>
   
 <style scoped>
-nav > a.router-link-active {
+nav>a.router-link-active {
   @apply font-extrabold;
 }
 
-nav > a.router-link-exact-active {
+nav>a.router-link-exact-active {
   color: var(--color-primary);
 }
 </style>

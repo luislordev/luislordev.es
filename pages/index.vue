@@ -1,6 +1,8 @@
 <template>
   <div class="container mx-auto px-3 md:px-0">
-    <section class="flex flex-col-reverse   md:flex-row justify-around items-center h-screen-without-header md:minus-4rem">
+    <section
+      class="flex flex-col-reverse   md:flex-row justify-around items-center h-screen-without-header md:minus-4rem"
+    >
       <div class="font-semibold text-7xl space-y-4 mt-5 md:mt-0 text-center md:text-left">
         <h1 class="text-orange-400">
           ¡Hola!
@@ -45,62 +47,45 @@
     </section>
     <section>
       <h3 class="text-3xl font-semibold">
-        Útimos articulos 
+        Útimos artículos
       </h3>
     </section>
     <section class="mt-4">
-      <!-- <div
+      <div
         v-if="posts"
         class="flex flex-wrap  justify-center"
       >
         <div
           v-for="post in posts"
-          :key="post.slug"
-          class="w-full md:w-1/2 lg:w-1/3 md:pr-3 pb-3 hover:px-4"
+          :key="post._id"
+          class="w-full md:w-1/2 lg:w-1/3 md:pr-3 pb-3"
         >
-          <nuxt-link :to="`blog/${post.slug}`">
-            <article-card
+          <nuxt-link :to="`${post._path}`">
+            <ArticleCard
               :post="post"
               class="cursor-pointer transition duration-500 ease-in-out transform hover:-translate-y-2"
             />
           </nuxt-link>
         </div>
       </div>
-      <h3
-        v-else
-        class="text-3xl font-semibold text-center p-5 h-28"
-      >
-        Proximámente...
-      </h3> -->
     </section>
   </div>
 </template>
 
-<!-- <script>
-import ArticleCard from '~/components/common/articleCard.vue'
-export default {
-  name: 'Home',
-  components: { ArticleCard },
-  async asyncData ({ $content }) {
-    const posts = await $content('articles')
-      .sortBy('createdAt', 'desc')
-      .only(['title', 'tags', 'slug', 'createdAt', 'description', 'read'])
-      .limit(3)
-      .fetch()
+<script setup lang="ts">
+import type { BlogPost } from '@/types'
 
-    return {
-      posts
-    }
-  }
-}
-</script> -->
+const { data: posts } = await useAsyncData('articles', () => queryContent<BlogPost>('blog')
+  .limit(3)
+  .find())
+</script>
 
 <style scoped>
 .h-screen-without-header {
   min-height: calc(100vh - 4rem);
 }
 
-.minus-4rem{
- margin-top: -4rem;
+.minus-4rem {
+  margin-top: -4rem;
 }
 </style>
