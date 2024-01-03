@@ -28,7 +28,7 @@ export default defineNuxtConfig({
   ],
   colorMode: {
     classSuffix: '',
-    preference: 'system', // default value of $colorMode.preference
+    preference: 'dark', // default value of $colorMode.preference
     fallback: 'dark',
   },
   content: {
@@ -39,9 +39,6 @@ export default defineNuxtConfig({
       anchorLinks:false
     }
   }, 
-  site: {
-    url: process.env.BASE_URL || 'https://luislordev.es',
-  },
   gtag: {
     id: process.env.GOOGLE_ANALYTICS_ID
   },
