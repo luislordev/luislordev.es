@@ -4,11 +4,18 @@ import svgLoader from 'vite-svg-loader'
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  app:{
+    head:{
+      charset:'utf-8',
+    },
+  },
   modules:[
     '@nuxt/content',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode',
-    'nuxt-icon'
+    'nuxt-icon',
+    '@nuxtjs/robots',
+    'nuxt-gtag'
   ],
   components: [
     {
@@ -31,6 +38,12 @@ export default defineNuxtConfig({
     markdown:{
       anchorLinks:false
     }
+  }, 
+  site: {
+    url: process.env.BASE_URL || 'https://luislordev.es',
+  },
+  gtag: {
+    id: process.env.GOOGLE_ANALYTICS_ID
   },
   vite: {
     plugins: [
@@ -38,4 +51,9 @@ export default defineNuxtConfig({
       svgLoader()
     ]
   },
+  nitro: {
+    prerender: {
+      routes: ['/sitemap.xml']
+    }
+  }
 })

@@ -10,7 +10,7 @@
         Empecé en el mundo de la programación allá por 2016, estudiando el FP de Grado Superior en Desarrollo de Aplicaciones Multiplataforma en la Universidad Francisco de Vitoria. Actualmente, trabajo desarrollando aplicaciones web de manera remota desde Madrid.
       </p>
       <p>
-        Me considero una persona curiosa, por lo cual intento mantenerme siempre al día en las tecnologías con las que trabajo y estoy siempre dispuesto a aprender algo nuevo y afrontar nuevas metas o retos que encuentre en el camino.<span class="italic">#ThisIsTheWay</span>
+        Me considero una persona curiosa, por lo cual intento mantenerme siempre al día en las tecnologías con las que trabajo y estoy siempre dispuesto a aprender algo nuevo y afrontar nuevas metas o retos que encuentre en el camino.<span class="italic"> #ThisIsTheWay</span>
       </p>
       <div>
         <h3 class="text-3xl text-center font-semibold">
@@ -71,6 +71,11 @@
 
 <script setup lang="ts">
 import {JOBS, STUDIES} from '@/data/experience'
+
+useSeoMeta({
+  title:'Sobre mí',
+  description:'Stack tecnológico, experiencia laboral y un poco sobre mis hobbies'
+})
 
 const jobs = computed(()=> JOBS)
 const studies = computed(()=> STUDIES)

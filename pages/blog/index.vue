@@ -23,6 +23,11 @@
 <script setup lang="ts">
 import type { BlogPost } from '@/types'
 
+useSeoMeta({
+  title:'Blog',
+  description:'Listado de todos mis artículos'
+})
+
 const { data: posts } = await useAsyncData('articles', () => queryContent<BlogPost>('blog')
   .sort({ date: -1 })
   .find())

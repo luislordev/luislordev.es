@@ -23,6 +23,26 @@ const { data: post } = await useAsyncData('article',
   () => queryContent<BlogPost>('blog')
     .where({ _path: path })
     .findOne())
+
+const articleTitle = post.value?.title || ''
+const articleDescription = post.value?.description || ''
+const articleImage = post.value?.image || 'https://res.cloudinary.com/dmqgdno4p/image/upload/v1668784378/Blog/imageOpenGraph_se4jtg.png'
+
+useSeoMeta({
+  title: articleTitle,
+  description: articleDescription,
+  ogTitle: articleTitle,
+  ogDescription: articleDescription,
+  ogUrl: 'https://luislordev.es',
+  ogImage: articleImage,
+  ogType: "website",
+  twitterSite: '@luislordev',
+  twitterCard: "summary_large_image",
+  twitterTitle: articleTitle,
+  twitterDescription: articleDescription,
+  twitterImage: articleImage
+})
+
 const formatDate = computed(() => {
   const createdAt = post.value?.createdAt
   if (createdAt) {
