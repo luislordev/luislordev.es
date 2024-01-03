@@ -29,6 +29,6 @@ useSeoMeta({
 })
 
 const { data: posts } = await useAsyncData('articles', () => queryContent<BlogPost>('blog')
-  .sort({ date: -1 })
+  .sort({ createdAt: -1 })
   .find())
 </script>

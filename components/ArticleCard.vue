@@ -1,6 +1,6 @@
 <template>
   <article
-    class="rounded-xl px-3 py-2 border-2 border-gray-700 dark:border-white hover:border-orange-400  dark:hover:border-orange-400"
+    class="rounded-xl px-3 py-2 border-2 border-gray-700 dark:border-white hover:border-orange-400  dark:hover:border-orange-400 h-40 max-h-40"
   >
     <h4 class="text-2xl font-semibold">
       {{ post.title }}
@@ -10,7 +10,7 @@
         <span>📅 {{ formatDate }}</span> |
         <span>⌛️ {{ post.read }} minutos</span>
       </div>
-      <div class="mt-3">
+      <div class="my-2 two-line-ellipsis">
         {{ post.description }}
       </div>
     </div>
@@ -31,3 +31,13 @@ const formatDate = computed(() => {
 })
 </script>
   
+<style scoped>
+.two-line-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+</style>

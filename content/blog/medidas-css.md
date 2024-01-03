@@ -3,7 +3,7 @@ title: Medidas CSS
 description: Explicación sobre los distintos tipos de unidades de medida que hay para CSS
 alt: Medidas CSS
 read: 6
-createdAt: 04-06-2023
+createdAt: 2023-04-06
 ---
 
 

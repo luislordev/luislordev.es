@@ -77,6 +77,7 @@ import type { BlogPost } from '@/types'
 
 const { data: posts } = await useAsyncData('articles', () => queryContent<BlogPost>('blog')
   .limit(3)
+  .sort({ createdAt: -1 })
   .find())
 </script>
 
