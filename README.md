@@ -1,21 +1,25 @@
-# LuisLorDev
+# luislordev.es
 
-Este es el repositorio de la web personal y del blog.
+Tutoriales, artículos y recursos para desarrollo web.
 
+## Setup
 
-## Build Setup
+Make sure to install the dependencies:
 
 ```bash
-# install dependencies
-$ npm install
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+# yarn
+yarn install
 
-# build for production and launch server
-$ npm run build
-$ npm run start
+```
 
-# generate static project
-$ npm run generate
+## Development Server
+
+Start the development server on `http://localhost:3000`:
+
+```bash
+
+# yarn
+yarn dev
+
 ```

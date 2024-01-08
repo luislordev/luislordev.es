@@ -1,54 +1,34 @@
 <template>
-  <div class="container mx-auto">
-    <section class="py-4">
+  <section class="container mx-auto px-3">
+    <div class="py-4">
       <h3 class="text-3xl font-semibold">
-        Articulos
+        Artículos
       </h3>
-    </section>
-    <section class="flex flex-col space-y-4">
-      <div v-for="post in posts" :key="post.slug">
-        <nuxt-link :to="`blog/${post.slug}`">
-          <article-card :post="post" class="transition duration-500 ease-in-out transform hover:-translate-y-2" />
+    </div>
+    <div class="flex flex-col space-y-4">
+      <div
+        v-for="post in posts"
+        :key="post._id"
+      >
+        <nuxt-link :to="`${post._path}`">
+          <ArticleCard
+            :post="post"
+            class="transition duration-500 ease-in-out transform hover:-translate-y-2"
+          />
         </nuxt-link>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 </template>
+<script setup lang="ts">
+import type { BlogPost } from '@/types'
 
-<script>
-import articleCard from '~/components/common/articleCard.vue'
-export default {
-  name: 'Blog',
-  components: { articleCard },
-  async asyncData ({ $content }) {
-    const posts = await $content('articles')
-      .sortBy('createdAt', 'desc')
-      .only(['title', 'tags', 'slug', 'createdAt', 'description', 'read'])
-      .fetch()
+useSeoMeta({
+  title:'Blog',
+  description:'Listado de todos mis artículos'
+})
 
-    return {
-      posts
-    }
-  },
-  head () {
-    return {
-      title: 'LuisLorDev | Blog',
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: 'Página de listado de post'
-        }
-      ]
-    }
-  }
-
-}
+const { data: posts } = await useAsyncData('articles', () => queryContent<BlogPost>('blog')
+  .sort({ createdAt: -1 })
+  .find())
 </script>
-
-<style scoped>
-.prueba {
-  @apply border-2 border-orange-400 translate-y-1 bg-red-500
-}
-
-</style>
